@@ -6,6 +6,7 @@ import { AlertComponent } from './alert/alert.component';
 import { FormsModule } from "@angular/forms";
 import { PersonListComponent } from './person-list/person-list.component';
 import { PersonComponent } from './person/person.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PersonComponent } from './person/person.component';
       AlertComponent,
       PersonListComponent,
       PersonComponent,
+      HeaderComponent,
   ],
   imports: [
     BrowserModule,
