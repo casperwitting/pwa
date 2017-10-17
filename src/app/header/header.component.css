@@ -1,0 +1,32 @@
+h3 {
+    color: darkblue;
+}
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-outline-info {
+    color: #17a2b8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #17a2b8;
+}
+
+.navbar-dark, .navbar-brand {
+    color: #fff;
+}
+
+.navbar-dark, .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
