@@ -4,23 +4,36 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './alert/alert.component';
 import { FormsModule } from "@angular/forms";
-import { PersonListComponent } from './person-list/person-list.component';
-import { PersonComponent } from './person/person.component';
+import { PersonListComponent } from './person/person-list/person-list.component';
+import { PersonItemComponent } from './person/person-list/person-item/person-item.component';
 import { HeaderComponent } from './header/header.component';
+import { PersonDetailComponent } from './person/person-detail/person-detail.component';
+import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from './home/home.component';
+import {PersonService} from "./person/person.service";
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'people', component: PersonListComponent},
+  { path: 'person/:id', component: PersonDetailComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
       AlertComponent,
       PersonListComponent,
-      PersonComponent,
+      PersonItemComponent,
       HeaderComponent,
+      PersonDetailComponent,
+      HomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 
 })

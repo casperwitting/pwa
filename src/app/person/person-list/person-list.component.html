@@ -1,11 +1,16 @@
 <div class="list-group">
-  <app-person
-          *ngFor="let person of people"
-          [name]="person.name"
-          [description]="person.description"
-          [age]="person.age"
-          [country]="person.country"
-  ></app-person>
+  <a
+          [routerLink]="['/person', person.id]"
+          href="#"
+          class="list-group-item"
+          *ngFor="let person of people">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ person.name }}</h5>
+      <small class="text-muted">{{ person.age }} jaar oud</small>
+    </div>
+    <p class="mb-1">{{ person.description }}</p>
+    <small class="text-muted">Komt uit {{ person.country }}</small>
+  </a>
 
   <a href="#" rel="preload" class="list-group-item list-group-item-action flex-column align-items-start active">
     <div class="d-flex w-100 justify-content-between">
