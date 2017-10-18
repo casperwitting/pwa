@@ -17,7 +17,7 @@ platformBrowserDynamic()
 function registerServiceWorker(swName: string) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register(`/pwa/assets/${swName}.js`)
+        .register(`/pwa/${swName}.js`)
         .then(reg => {
           console.log('[App] Successful service worker registration', reg);
         })
