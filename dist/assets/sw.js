@@ -27,6 +27,14 @@ const fileManifest = [
     "revision": "e3076756d6f82b724f917ebf7a689f88"
   },
   {
+    "url": "assets/sw.js",
+    "revision": "81499a18ace486536c6440a9882b1bc0"
+  },
+  {
+    "url": "assets/workbox-sw.prod.v2.1.0.js",
+    "revision": "e5f207838d7fd9c81835d5705a73cfa2"
+  },
+  {
     "url": "favicon.ico",
     "revision": "b9aa7c338693424aae99599bec875b5f"
   },
@@ -52,15 +60,15 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cee7d1a547213c31e9e11572d548fca1"
+    "revision": "43cee35489c7135e0b11f2be5422c9b6"
   },
   {
-    "url": "inline.3424ce344931e9c89c36.bundle.js",
-    "revision": "03b4149e51de7850a6c92aad8c1a4d5d"
+    "url": "inline.dcc171e2cd6566fe4baf.bundle.js",
+    "revision": "672975c8b094c3d2eeff09a2d04e2e9e"
   },
   {
-    "url": "main.4147ce26d63de77ee9a7.bundle.js",
-    "revision": "e5ac50ed8a910bc0a4a1b07938c856af"
+    "url": "main.098f5aa85ac14986e65f.bundle.js",
+    "revision": "399f9a1206c8a67a26063d8dcb124af7"
   },
   {
     "url": "polyfills.900aaf0d520c2ec873a7.bundle.js",
