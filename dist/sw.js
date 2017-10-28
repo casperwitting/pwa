@@ -52,7 +52,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cb1ad61676b5b62c0efdf8dcf83e52dc"
+    "revision": "447cd205ed72049f8012da1e7df60a8b"
   },
   {
     "url": "inline.698d227097ac1633a537.bundle.js",
