@@ -3,17 +3,17 @@
   "name": "Progressive Web Application demo",
   "icons": [
     {
-      "src": "create_logo.png",
+      "src": "assets/create_logo.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "create_logo.png",
+      "src": "assets/create_logo.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "create_logo.png",
+      "src": "assets/create_logo.png",
       "type": "image/png",
       "sizes": "192x192"
     }
