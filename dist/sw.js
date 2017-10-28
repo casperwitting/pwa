@@ -27,14 +27,6 @@ const fileManifest = [
     "revision": "e3076756d6f82b724f917ebf7a689f88"
   },
   {
-    "url": "assets/sw.js",
-    "revision": "94937ce8dd6f8f63d6d830689f20630a"
-  },
-  {
-    "url": "assets/workbox-sw.prod.v2.1.0.js",
-    "revision": "e5f207838d7fd9c81835d5705a73cfa2"
-  },
-  {
     "url": "favicon.ico",
     "revision": "b9aa7c338693424aae99599bec875b5f"
   },
