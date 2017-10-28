@@ -1,0 +1,25 @@
+{
+  "short_name": "PWA demo",
+  "name": "Progressive Web Application demo",
+  "icons": [
+    {
+      "src": "create_logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "create_logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "create_logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#1976d2",
+  "theme_color": "#1976d2",
+  "display": "standalone"
+}
