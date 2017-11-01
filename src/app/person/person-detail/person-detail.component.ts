@@ -8,7 +8,7 @@ import {PersonService} from "../person.service";
   styleUrls: ['./person-detail.component.css']
 })
 export class PersonDetailComponent implements OnInit {
-  person: {id: number, name: string, description: string, age: number, country: string, avatar: string};
+  person: {id: number, full_name: string, description: string, age: number, country: string, avatar: string};
 
 
   constructor(private personService: PersonService,

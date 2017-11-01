@@ -21,5 +21,11 @@ export class PersonService {
         return person;
     }
 
+    addPerson(person: Person) {
+        let last:any = this.people[this.people.length-1];
+        person.id = last.id + 1;
+        this.people.push(person);
+    }
+
 
 }

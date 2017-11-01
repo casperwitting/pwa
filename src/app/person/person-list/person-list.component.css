@@ -1,3 +1,8 @@
 #preload {
     display: none;
 }
+
+.aqua-gradient {
+    background: -webkit-linear-gradient(50deg,#2096ff,#05ffa3);
+    background: linear-gradient(40deg,#2096ff,#05ffa3);
+}

@@ -11,10 +11,12 @@ import { PersonDetailComponent } from './person/person-detail/person-detail.comp
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from './home/home.component';
 import {PersonService} from "./person/person.service";
+import { PersonFormComponent } from './person/person-form/person-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'people', component: PersonListComponent},
+  { path: 'person/add', component: PersonFormComponent },
   { path: 'person/:id', component: PersonDetailComponent }
 ];
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
       PersonItemComponent,
       HeaderComponent,
       PersonDetailComponent,
-      HomeComponent
+      HomeComponent,
+      PersonFormComponent,
   ],
   imports: [
     BrowserModule,
