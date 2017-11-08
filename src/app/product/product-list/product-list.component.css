@@ -1,0 +1,21 @@
+.product-list .card{
+    padding: 0;
+}
+
+.in-cart {
+    float: right;
+}
+
+.price {
+    font-size: 25px;
+}
+
+.card-deck .card:first-child {
+    margin-top: 15px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+}

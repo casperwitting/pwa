@@ -2,21 +2,11 @@ h3 {
     color: darkblue;
 }
 
-.bg-dark {
-    background-color: #343a40!important;
-}
+nav {
+    background: #E44D26;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.btn-outline-info:hover {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-}
-
-.btn-outline-info {
-    color: #17a2b8;
-    background-color: transparent;
-    background-image: none;
-    border-color: #17a2b8;
 }
 
 .navbar-dark, .navbar-brand {
@@ -37,5 +27,11 @@ nav .navbar-toggler-right {
 
 nav .fa-bars{
     color: #ffffff;
+}
 
+.btn-outline-light {
+    color: #f8f9fa;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f8f9fa;
 }

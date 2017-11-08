@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router, NavigationStart} from '@angular/router'
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   show:boolean = false;
-  constructor() { }
+
+  constructor(router:Router) {
+    router.events.subscribe(event => {
+      if(event instanceof NavigationStart) {
+        this.show = false;
+      }
+  });
+  }
 
   ngOnInit() {
   }

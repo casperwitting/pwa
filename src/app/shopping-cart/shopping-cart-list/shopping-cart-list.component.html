@@ -1,0 +1,46 @@
+<table class="table shopping-cart-list">
+  <thead>
+  <tr class="m-0">
+    <th scope="col" class="w-20"></th>
+    <th scope="col" class="w-60">Product</th>
+    <th scope="col" class="w-10">Aantal</th>
+    <th scope="col" class="w-30">Prijs</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr
+    class="product m-0"
+    *ngFor="let product of products">
+    <th class="w-20">
+      <img src="{{ product.avatar }}" class="avatar" alt="product image">
+    </th>
+    <td class="product-name w-60">{{ product.title }}</td>
+    <td class="w-10">
+      <input class="form-control amount" type="text" value="1">
+    </td>
+    <td class="price w-30">€ {{ product.price }}</td>
+  </tr>
+  <tr
+    *ngIf="products.length === 0">
+    <td colspan="4" class="cart-empty">Leeg :(</td>
+  </tr>
+  </tbody>
+</table>
+<table class="table">
+  <tbody>
+  <tr>
+    <th><h3>Totaal</h3></th>
+    <th><h3 class="float-right">€ {{ shoppingCartPriceTotal }}</h3></th>
+  </tr>
+  </tbody>
+</table>
+<a
+  class="btn btn-outline-secondary"
+  [routerLink]="['']">
+  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  Verder winkelen
+</a>
+<button class="btn btn-success float-right">
+  Afrekenen
+  <i class="fa fa-play" aria-hidden="true"></i>
+</button>

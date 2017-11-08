@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md dark bg-dark">
+<nav class="navbar navbar-toggleable-md">
   <button (click)="toggleCollapse()" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </button>
@@ -10,18 +10,27 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.show]="show">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['']">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" [routerLink]="['']">Producten <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['people']">Personen</a>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['cart']">Winkelwagen <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['person/add']">Persoon toevoegen</a>
-      </li>
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" [routerLink]="['people']">Personen</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" [routerLink]="['person/add']">Persoon toevoegen</a>-->
+      <!--</li>-->
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <!--<form class="form-inline my-2 my-lg-0">-->
+      <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+      <!--<button class="btn btn-outline-light" type="submit">Search</button>-->
+    <!--</form>-->
+    <!--<div class="input-group my-2 my-lg-0">-->
+      <!--<input type="text" class="form-control mr-sm-2" placeholder="Search for..." aria-label="Search for...">-->
+      <!--<span class="input-group-btn">-->
+        <!--<button class="btn btn-outline-light" type="button">Go</button>-->
+      <!--</span>-->
+    <!--</div>-->
   </div>
 </nav>
