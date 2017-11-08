@@ -21,10 +21,10 @@
       "src": "assets/create_logo.png",
       "type": "image/png",
       "sizes": "512x512"
-    },
+    }
   ],
   "start_url": "./?utm_source=homescreen",
   "background_color": "#1976d2",
-  "theme_color": "#1976d2",
+  "theme_color": "#eb5a27",
   "display": "standalone"
 }
