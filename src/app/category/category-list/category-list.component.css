@@ -1,0 +1,24 @@
+.category-list .category {
+    border-style: solid;
+    border-color: #d9d5d0;
+    border-width: 1px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.category-list .category img {
+    width: 100px;
+}
+
+.category-list .category h5 {
+    margin: 10px 0px 0px 0px;
+    color: #212529;
+}
+
+@media (max-width: 768px) {
+    .category {
+        border-right: 0px;
+        border-bottom: 0px;
+    }
+}

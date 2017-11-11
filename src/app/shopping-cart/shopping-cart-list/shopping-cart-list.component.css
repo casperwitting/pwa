@@ -28,3 +28,8 @@
 .shopping-cart-list .product .price {
     font-size: 11px;
 }
+
+.shopping-cart-details {
+    background: #ffffff;
+    padding: 15px;
+}

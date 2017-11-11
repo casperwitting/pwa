@@ -2,6 +2,13 @@
     padding: 0;
 }
 
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .in-cart {
     float: right;
 }
@@ -19,3 +26,4 @@
     height: 150px;
     margin: 15px auto;
 }
+

@@ -17,6 +17,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ShoppingCartWidgetComponent } from './product/shopping-cart-widget/shopping-cart-widget.component';
 import { ProductService } from './product/product.service';
 import { ShoppingCartListComponent } from './shopping-cart/shopping-cart-list/shopping-cart-list.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
 
 
 const appRoutes: Routes = [
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
   { path: 'people', component: PersonListComponent},
   { path: 'person/add', component: PersonFormComponent },
   { path: 'person/:id', component: PersonDetailComponent },
-  { path: 'cart', component: ShoppingCartListComponent }
+  { path: 'cart', component: ShoppingCartListComponent },
+  { path: 'categories', component: CategoryListComponent },
+  { path: 'category/:categoryName', component: ProductListComponent }
 ];
 
 @NgModule({
@@ -40,6 +43,7 @@ const appRoutes: Routes = [
       ProductListComponent,
       ShoppingCartWidgetComponent,
       ShoppingCartListComponent,
+      CategoryListComponent,
   ],
   imports: [
     BrowserModule,
