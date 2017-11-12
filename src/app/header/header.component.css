@@ -10,7 +10,7 @@ nav {
 }
 
 .navbar-dark, .navbar-brand {
-    color: #fff;
+    color: #fff !important;
 }
 
 .navbar-dark, .nav-link {

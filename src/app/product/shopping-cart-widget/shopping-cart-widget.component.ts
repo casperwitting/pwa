@@ -1,17 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {ProductService} from "../product.service";
 
 @Component({
-  selector: 'app-shopping-cart-widget',
-  templateUrl: './shopping-cart-widget.component.html',
-  styleUrls: ['./shopping-cart-widget.component.css']
+    selector: 'app-shopping-cart-widget',
+    templateUrl: './shopping-cart-widget.component.html',
+    styleUrls: ['./shopping-cart-widget.component.css']
 })
 export class ShoppingCartWidgetComponent implements OnInit {
-  @Input() inShoppingCartCount: number;
+    @Input() inShoppingCartCount: number;
 
-  constructor(private productService: ProductService) { }
+    constructor(private productService: ProductService,
+                ) {
+    }
 
-  ngOnInit() {
-    this.inShoppingCartCount = this.productService.inShoppingCartCount();
-  }
+    ngOnInit() {
+        this.inShoppingCartCount = this.productService.inShoppingCartCount();
+    }
+
+
 }

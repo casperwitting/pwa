@@ -18,6 +18,7 @@ import { ShoppingCartWidgetComponent } from './product/shopping-cart-widget/shop
 import { ProductService } from './product/product.service';
 import { ShoppingCartListComponent } from './shopping-cart/shopping-cart-list/shopping-cart-list.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import { PushNotificationsModule } from 'ng-push';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    PushNotificationsModule
   ],
   providers: [PersonService, ProductService],
   bootstrap: [AppComponent]

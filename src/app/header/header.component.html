@@ -3,8 +3,8 @@
     <i class="fa fa-bars" aria-hidden="true"></i>
   </button>
     <!-- other navbar code omitted -->
-  <a class="navbar-brand" [routerLink]="['']">
-    <img src="/assets/create_logo_white.png" alt="Create" height="20">
+  <a class="navbar-brand" (click)="pusher()">
+    <img src="/pwa/assets/create_logo_white.png" alt="Create" height="20">
   </a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.show]="show">

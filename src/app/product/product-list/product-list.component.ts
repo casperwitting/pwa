@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../product.service";
 import {ActivatedRoute} from "@angular/router";
+import {PushNotificationsService} from "ng-push";
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,8 @@ export class ProductListComponent implements OnInit {
   inShoppingCartCount = 0;
 
   constructor(private productService: ProductService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private _pushNotifications: PushNotificationsService) { }
 
   ngOnInit() {
     const categoryName = this.route.snapshot.params['categoryName'];
@@ -27,6 +29,7 @@ export class ProductListComponent implements OnInit {
   onAddToShoppingCart(product_id) {
     this.productService.addProductToShoppingCart(product_id);
     this.inShoppingCartCount = this.productService.inShoppingCartCount();
+    this._pushNotifications.requestPermission();
   }
 
 }

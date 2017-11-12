@@ -28,3 +28,4 @@ function registerServiceWorker(swName: string) {
         console.error('[App] Service Worker API is not supported in current browser');
     }
 }
+
