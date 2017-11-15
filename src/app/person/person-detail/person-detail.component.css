@@ -1,5 +1,4 @@
 
-
 .card {
     padding-top: 20px;
     margin: 10px 0 20px 0;
@@ -196,8 +195,8 @@
 .card.hovercard .cardheader {
     background-size: cover;
     height: 135px;
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #2BC0E4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -216,7 +215,7 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
+    border: 5px solid rgba(255, 255, 255, 0.5);
 }
 
 .card.hovercard .info {
@@ -244,4 +243,9 @@
     margin-bottom: 17px;
 }
 
-.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+.btn {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    line-height: 18px;
+}

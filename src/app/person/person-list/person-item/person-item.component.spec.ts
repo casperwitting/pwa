@@ -2,24 +2,24 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PersonItemComponent } from './person-item.component';
 
-describe('PersonComponent', () => {
-  let component: PersonItemComponent;
-  let fixture: ComponentFixture<PersonItemComponent>;
+describe( 'PersonComponent', () => {
+    let component: PersonItemComponent;
+    let fixture: ComponentFixture<PersonItemComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PersonItemComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach( async( () => {
+        TestBed.configureTestingModule( {
+            declarations: [ PersonItemComponent ]
+        } )
+            .compileComponents();
+    } ) );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PersonItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach( () => {
+        fixture = TestBed.createComponent( PersonItemComponent );
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    } );
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    it( 'should be created', () => {
+        expect( component ).toBeTruthy();
+    } );
+} );

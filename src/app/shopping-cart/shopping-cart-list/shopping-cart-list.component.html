@@ -1,48 +1,48 @@
 <table class="table shopping-cart-list">
-  <thead>
-  <tr class="m-0">
-    <th scope="col" class="w-10"></th>
-    <th scope="col" class="w-60">Product</th>
-    <th scope="col" class="w-10">Aantal</th>
-    <th scope="col" class="w-40">Prijs</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr
-    class="product m-0"
-    *ngFor="let product of products">
-    <td class="w-10">
-      <img src="{{ product.avatar }}" class="avatar" alt="product image">
-    </td>
-    <td class="product-name w-60">{{ product.title }}</td>
-    <td class="w-10">
-      <input class="form-control amount" type="number" value="1">
-    </td>
-    <td class="price w-40">€ {{ product.price }}</td>
-  </tr>
-  <tr
-    *ngIf="products.length === 0">
-    <td colspan="4" class="cart-empty">Leeg :(</td>
-  </tr>
-  </tbody>
-</table>
-<div class="shopping-cart-details fixed-bottom">
-  <table class="table">
+    <thead>
+    <tr class="m-0">
+        <th scope="col" class="w-10"></th>
+        <th scope="col" class="w-60">Product</th>
+        <th scope="col" class="w-10">Aantal</th>
+        <th scope="col" class="w-40">Prijs</th>
+    </tr>
+    </thead>
     <tbody>
-    <tr>
-      <th><h3>Totaal</h3></th>
-      <th><h3 class="float-right">€ {{ shoppingCartPriceTotal }}</h3></th>
+    <tr
+            class="product m-0"
+            *ngFor="let product of products">
+        <td class="w-10">
+            <img src="{{ product.avatar }}" class="avatar" alt="product image">
+        </td>
+        <td class="product-name w-60">{{ product.title }}</td>
+        <td class="w-10">
+            <input class="form-control amount" type="number" value="1">
+        </td>
+        <td class="price w-40">€ {{ product.price }}</td>
+    </tr>
+    <tr
+            *ngIf="products.length === 0">
+        <td colspan="4" class="cart-empty">Leeg :(</td>
     </tr>
     </tbody>
-  </table>
-  <a
-          class="btn btn-outline-secondary"
-          [routerLink]="['']">
-    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    Verder winkelen
-  </a>
-  <button class="btn btn-success float-right">
-    Afrekenen
-    <i class="fa fa-play" aria-hidden="true"></i>
-  </button>
+</table>
+<div class="shopping-cart-details fixed-bottom">
+    <table class="table">
+        <tbody>
+        <tr>
+            <th><h3>Totaal</h3></th>
+            <th><h3 class="float-right">€ {{ shoppingCartPriceTotal }}</h3></th>
+        </tr>
+        </tbody>
+    </table>
+    <a
+            class="btn btn-outline-secondary"
+            [routerLink]="['']">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        Verder winkelen
+    </a>
+    <button class="btn btn-success float-right">
+        Afrekenen
+        <i class="fa fa-play" aria-hidden="true"></i>
+    </button>
 </div>
