@@ -33,3 +33,7 @@
     background: #ffffff;
     padding: 15px;
 }
+
+app-shopping-cart-list {
+    padding: 0;
+}

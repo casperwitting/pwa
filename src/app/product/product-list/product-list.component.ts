@@ -27,8 +27,8 @@ export class ProductListComponent implements OnInit {
         }
     }
 
-    onAddToShoppingCart( product_id ) {
-        this.productService.addProductToShoppingCart( product_id );
+    onAddToShoppingCart( productId ) {
+        this.productService.addProductToShoppingCart( productId );
         this.inShoppingCartCount = this.productService.inShoppingCartCount();
         this._pushNotifications.requestPermission();
     }

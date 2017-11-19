@@ -9,14 +9,14 @@ import { GlobalService } from "../global.service";
     styleUrls: [ './header.component.css' ]
 } )
 export class HeaderComponent implements OnInit {
-    show: boolean = false;
+    showMenu: boolean = false;
 
     constructor( router: Router,
                  private _pushNotifications: PushNotificationsService,
                  public globalService: GlobalService ) {
         router.events.subscribe( event => {
             if ( event instanceof NavigationStart ) {
-                this.show = false;
+                this.showMenu = false;
             }
         } );
     }
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
     }
 
     toggleCollapse() {
-        this.show = !this.show
+        this.showMenu = !this.showMenu
     }
 
     pusher() {
