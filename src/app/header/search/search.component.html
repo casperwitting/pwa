@@ -1,0 +1,23 @@
+<div class="navbar-search-wrapper">
+    <a [routerLink]="['']"
+       class="pull-left nav-block nav-link">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </a>
+        <input
+                type="text"
+                id="search-input"
+                class=""
+                placeholder="zoeken.."
+                (keyup)="searchProducts($event)">
+
+</div>
+<div class="search-results row">
+  <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let product of searchResults">
+          <a href="">{{product.title}}</a>
+      </li>
+  </ul>
+</div>
+
+

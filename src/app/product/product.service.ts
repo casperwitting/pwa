@@ -156,10 +156,9 @@ export class ProductService {
     }
 
     getProductsByCategory( categoryName: string ) {
-        let products = this.getProducts();
         let productsInCategory = [];
 
-        for ( let product of products ) {
+        for ( let product of this.products ) {
             if ( product.category == categoryName ) {
                 productsInCategory.push( product );
             }
@@ -177,6 +176,14 @@ export class ProductService {
         return product;
     }
 
+    getProductByTitle( query ) {
+        if(query) {
+            return this.products.filter((product) => product.title.toUpperCase().includes(query.toUpperCase()) );
+        } else {
+          return [];
+        }
+    }
+
     addProduct( product: Product ) {
         let last: any = this.products[ this.products.length - 1 ];
         product.id = last.id + 1;
@@ -189,7 +196,7 @@ export class ProductService {
         for ( let cartProduct of this.shoppingCart ) {
             let product = this.getProduct( cartProduct.productId );
             product[ 'quantity' ] = cartProduct.quantity;
-            product[ 'cartPrice' ] = this.roundPrice(cartProduct.quantity * product.price);
+            product[ 'cartPrice' ] = this.roundPrice( cartProduct.quantity * product.price );
             products.push( product );
         }
         return products;
@@ -213,7 +220,15 @@ export class ProductService {
             this.shoppingCart.push( newProduct );
         }
 
-        this.cookieService.set( this.shoppingCartCookie, JSON.stringify( this.shoppingCart ) );
+        this.updateShoppingCartCookie();
+    }
+
+    removeProductFromShoppingCart( productId: number ) {
+        this.shoppingCart = this.shoppingCart.filter( function ( obj ) {
+            return obj.productId !== productId;
+        } );
+
+        // this.updateShoppingCartCookie();
     }
 
     productInShoppingCart( productId ) {
@@ -241,10 +256,14 @@ export class ProductService {
         for ( let product of products ) {
             priceTotal += product.cartPrice;
         }
-        return this.roundPrice(priceTotal);
+        return this.roundPrice( priceTotal );
     }
 
     roundPrice( price: number ) {
         return +price.toFixed( 2 );
+    }
+
+    updateShoppingCartCookie() {
+        this.cookieService.set( this.shoppingCartCookie, JSON.stringify( this.shoppingCart ) );
     }
 }

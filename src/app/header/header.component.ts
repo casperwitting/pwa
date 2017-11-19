@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router'
 import { PushNotificationsService } from "ng-push";
 import { GlobalService } from "../global.service";
+import { ProductService } from "../product/product.service";
 
 @Component( {
     selector: 'app-header',
@@ -10,6 +11,8 @@ import { GlobalService } from "../global.service";
 } )
 export class HeaderComponent implements OnInit {
     showMenu: boolean = false;
+    searchMode: boolean = false;
+
 
     constructor( router: Router,
                  private _pushNotifications: PushNotificationsService,
@@ -39,5 +42,11 @@ export class HeaderComponent implements OnInit {
             err => console.log( err )
         )
     }
+
+    changeMode() {
+        this.searchMode = !this.searchMode;
+    }
+
+
 
 }

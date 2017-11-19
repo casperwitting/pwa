@@ -21,9 +21,12 @@ import { CategoryListComponent } from './category/category-list/category-list.co
 import { PushNotificationsModule } from 'ng-push';
 import { GlobalService } from './global.service';
 import { CookieService } from 'ngx-cookie-service';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { SearchComponent } from './header/search/search.component';
 
 const appRoutes: Routes = [
     { path: '', component: ProductListComponent },
+    { path: 'search', component: SearchComponent },
     { path: 'people', component: PersonListComponent },
     { path: 'person/add', component: PersonFormComponent },
     { path: 'person/:id', component: PersonDetailComponent },
@@ -31,6 +34,12 @@ const appRoutes: Routes = [
     { path: 'categories', component: CategoryListComponent },
     { path: 'category/:categoryName', component: ProductListComponent }
 ];
+
+export class MyHammerConfig extends HammerGestureConfig {
+    overrides = <any>{
+        'swipe': { velocity: 0.4, threshold: 20 } // override default settings
+    }
+}
 
 @NgModule( {
     declarations: [
@@ -46,6 +55,7 @@ const appRoutes: Routes = [
         ShoppingCartWidgetComponent,
         ShoppingCartListComponent,
         CategoryListComponent,
+        SearchComponent,
     ],
     imports: [
         BrowserModule,
@@ -53,7 +63,10 @@ const appRoutes: Routes = [
         RouterModule.forRoot( appRoutes ),
         PushNotificationsModule
     ],
-    providers: [ PersonService, CookieService, ProductService, GlobalService ],
+    providers: [ PersonService, CookieService, ProductService, GlobalService, {
+        provide: HAMMER_GESTURE_CONFIG,
+        useClass: MyHammerConfig
+    }],
     bootstrap: [ AppComponent ]
 
 } )

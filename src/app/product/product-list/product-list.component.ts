@@ -10,7 +10,8 @@ import { ProductService } from "../product.service";
 } )
 export class ProductListComponent implements OnInit {
     products = [];
-    inShoppingCartCount = 0;
+    inShoppingCartCount: number = 0;
+    contentIsLoaded: boolean = false;
 
     constructor( private productService: ProductService,
                  private route: ActivatedRoute,
@@ -18,6 +19,13 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit() {
+        setTimeout( () => {
+            return this.fetchProducts();
+        }, 1000 ); //Simulate API response time
+
+    }
+
+    fetchProducts() {
         const categoryName = this.route.snapshot.params[ 'categoryName' ];
         if ( categoryName ) {
             this.products = this.productService.getProductsByCategory( categoryName );
@@ -25,6 +33,7 @@ export class ProductListComponent implements OnInit {
         else {
             this.products = this.productService.getProducts();
         }
+        this.contentIsLoaded = true;
     }
 
     onAddToShoppingCart( productId ) {

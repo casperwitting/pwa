@@ -13,11 +13,20 @@ export class ShoppingCartListComponent implements OnInit {
     constructor( private productService: ProductService ) {
     }
 
-
-    ngOnInit() {
+    fetchShoppingCart() {
         this.products = this.productService.getProductsInShoppingCart();
         this.shoppingCartPriceTotal = this.productService.getShoppingCartPriceTotal();
-        console.log( this.products );
+    }
+
+    ngOnInit() {
+        this.fetchShoppingCart();
+    }
+
+    swipe(productId: number) {
+        this.productService.removeProductFromShoppingCart(productId);
+        console.log(productId);
+        this.fetchShoppingCart();
+
     }
 
 }

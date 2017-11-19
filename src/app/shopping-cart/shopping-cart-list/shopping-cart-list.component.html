@@ -11,7 +11,8 @@
         <tbody>
         <tr
                 class="product m-0"
-                *ngFor="let product of products">
+                *ngFor="let product of products"
+                (swipeleft)="swipe(product.id)" (swiperight)="swipe(product.id)">
             <td class="w-10">
                 <img src="{{ product.avatar }}" class="avatar" alt="product image">
             </td>
