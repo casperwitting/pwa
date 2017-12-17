@@ -1,0 +1,56 @@
+<div class="mt-2">
+    <h4>Je bent er bijna!</h4>
+    <div class="row">
+        <div class="stepwizard">
+            <div class="stepwizard-row">
+                <div class="stepwizard-step">
+                    <button type="button" class="btn btn-primary btn-circle">1</button>
+                    <p>Gegevens</p>
+                </div>
+                <div class="stepwizard-step">
+                    <button type="button" class="btn btn-default btn-circle">2</button>
+                    <p>Betaalwijze</p>
+                </div>
+                <div class="stepwizard-step">
+                    <button type="button" class="btn btn-default btn-circle" disabled="disabled">3</button>
+                    <p>Voltooien</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputName">Naam</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Naam">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputZipCode">Postcode</label>
+            <input type="text" class="form-control" id="inputZipCode" placeholder="Postcode">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputHomeNumber">Huisnummer</label>
+            <input type="text" class="form-control" id="inputHomeNumber" placeholder="Huisnummer">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputTown">Woonplaats</label>
+            <input type="text" class="form-control" id="inputTown" placeholder="Woonplaats">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail">E-mailadres</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="E-mailadres">
+        </div>
+    </div>
+    <div class="p-3 fixed-bottom">
+        <a
+                class="btn btn-outline-secondary"
+                [routerLink]="['']">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Verder winkelen
+        </a>
+        <a class="btn btn-success float-right"
+           [routerLink]="['/payment']">
+            Betalen
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>

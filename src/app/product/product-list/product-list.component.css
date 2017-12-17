@@ -7,6 +7,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    display: none;
 }
 
 .in-cart {
@@ -25,6 +26,11 @@
     width: 150px;
     height: 150px;
     margin: 15px auto;
+}
+
+.card-footer {
+    background: none;
+    border: none;
 }
 
 .ribbon {

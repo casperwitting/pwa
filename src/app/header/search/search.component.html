@@ -15,7 +15,7 @@
   <ul class="list-group">
       <li class="list-group-item"
           *ngFor="let product of searchResults">
-          <a href="">{{product.title}}</a>
+          <a [routerLink]="['/product', product.id]" class="text-dark">{{product.title}}</a>
       </li>
   </ul>
 </div>

@@ -1,0 +1,60 @@
+<div class="mt-2">
+  <h4>Betaalwijze</h4>
+  <div class="row">
+    <div class="stepwizard">
+      <div class="stepwizard-row">
+        <div class="stepwizard-step">
+          <button type="button" class="btn btn-primary btn-circle">1</button>
+          <p>Gegevens</p>
+        </div>
+        <div class="stepwizard-step">
+          <button type="button" class="btn btn-primary btn-circle">2</button>
+          <p>Betaalwijze</p>
+        </div>
+        <div class="stepwizard-step">
+          <button type="button" class="btn btn-default btn-circle" disabled="disabled">3</button>
+          <p>Voltooien</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <fieldset class="form-group">
+        <legend class="col-form-legend col-sm-2">Kies een betaalmethode</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              Ideal
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              Bitcoins
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+              Paypal
+            </label>
+          </div>
+        </div>
+    </fieldset>
+  </div>
+  <div class="p-3 fixed-bottom">
+    <a
+            class="btn btn-outline-secondary"
+            [routerLink]="['/order']">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      Terug
+    </a>
+    <a class="btn btn-success float-right"
+       [routerLink]="['/payment/success']">
+      Voltooien
+      <i class="fa fa-play" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>

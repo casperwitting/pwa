@@ -1,0 +1,38 @@
+.product .price {
+    font-size: 25px;
+}
+
+.related {
+    background: #f0ece6;
+}
+
+.related-products .related-link {
+    display: block;
+}
+
+.related-products {
+    padding: 50px 0px !important;
+}
+
+.related-products .add-to-cart {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 45% 0px 0px 0px;
+}
+
+.related-products .list-group-item {
+    padding: 1.45rem 1.25rem;
+}
+
+.related-products img {
+    width: 50px;
+}
+
+.related-products .info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 210px;
+    display: block;
+    overflow: hidden;
+}

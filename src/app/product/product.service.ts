@@ -1,6 +1,7 @@
 import { Product } from "./product.model";
 import { CookieService } from 'ngx-cookie-service';
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from  'angularfire2/firestore';
 
 @Injectable()
 export class ProductService {
@@ -147,7 +148,10 @@ export class ProductService {
     ];
     private shoppingCart: { productId: number, quantity: number }[] = (this.cookieService.get( this.shoppingCartCookie ) ? JSON.parse( this.cookieService.get( this.shoppingCartCookie ) ) : []);
 
-    constructor( private cookieService: CookieService ) {
+    prodcollection: AngularFirestoreCollection<any> = this.afs.collection('cart');
+    prodobs = this.prodcollection.valueChanges();
+
+    constructor( private cookieService: CookieService, private afs: AngularFirestore ) {
     }
 
 
@@ -176,11 +180,23 @@ export class ProductService {
         return product;
     }
 
+    getRelatedProducts() {
+        let relatedProducts = [];
+        for(let i = 0;i < 3;i++) {
+            relatedProducts.push(this.getProduct(this.getRandomInt(1, 12)));
+        }
+        return relatedProducts;
+    }
+
+    getRandomInt( min, max ) {
+        return Math.floor( Math.random() * (max - min + 1) + min );
+    }
+
     getProductByTitle( query ) {
-        if(query) {
-            return this.products.filter((product) => product.title.toUpperCase().includes(query.toUpperCase()) );
+        if ( query ) {
+            return this.products.filter( ( product ) => product.title.toUpperCase().includes( query.toUpperCase() ) );
         } else {
-          return [];
+            return [];
         }
     }
 
@@ -218,6 +234,13 @@ export class ProductService {
         }
         else {
             this.shoppingCart.push( newProduct );
+            this.prodcollection.doc('1').set({
+            id: newProduct.productId,
+            quantity: newProduct.quantity
+                    })
+            .catch((err) => {
+                console.log(err);
+            })
         }
 
         this.updateShoppingCartCookie();
