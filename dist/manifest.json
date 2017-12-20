@@ -1,0 +1,31 @@
+{
+  "short_name": "PWA demo",
+  "name": "Progressive Web Application demo",
+  "icons": [
+    {
+      "src": "assets/create_logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/create_logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/create_logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/create_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./?utm_source=homescreen",
+  "background_color": "#eb5a27",
+  "theme_color": "#eb5a27",
+  "display": "standalone",
+  "gcm_sender_id": "103953800507"
+}
