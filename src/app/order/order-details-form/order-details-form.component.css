@@ -57,3 +57,14 @@
 h4 {
     margin-bottom: 1rem;
 }
+
+.details {
+    margin-bottom: 5rem;
+}
+
+.fixed-bottom {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(245,245,245,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(245,245,245,1);
+    box-shadow: 0px 0px 5px 0px rgba(245,245,245,1);
+}
