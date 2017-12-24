@@ -2,7 +2,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 importScripts('https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.9.0/firebase-messaging.js');
 firebase.initializeApp({
-    'messagingSenderId': 'YOUR-SENDER-ID'
+    'messagingSenderId': '965705176673'
 });
 const messaging = firebase.messaging();
 /**
