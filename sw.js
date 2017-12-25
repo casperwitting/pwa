@@ -31,6 +31,10 @@ const fileManifest = [
     "revision": "b9aa7c338693424aae99599bec875b5f"
   },
   {
+    "url": "firebase-messaging-sw.js",
+    "revision": "292430b37502d9dbd0b8f24f258641af"
+  },
+  {
     "url": "fontawesome-webfont.674f50d287a8c48dc19b.eot",
     "revision": "674f50d287a8c48dc19ba404d20fe713"
   },
@@ -52,15 +56,15 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e103a93c5724897a4ada3f7786c81ef0"
+    "revision": "f5044923516de4da144ffb65b2fde61d"
   },
   {
-    "url": "inline.035a480ba0910883525c.bundle.js",
-    "revision": "1c5505dac2a021eb757153ff7f598e94"
+    "url": "inline.0d343b6ff37fabc40930.bundle.js",
+    "revision": "1624499ddfa8cbd497217fd788b0d9d3"
   },
   {
-    "url": "main.8776fab507814d85f8b9.bundle.js",
-    "revision": "f2a769a4c074776ee638e4b802614a90"
+    "url": "main.15ea551af1b374e6448b.bundle.js",
+    "revision": "597dd33d9dded46ac8b02fc116c74e44"
   },
   {
     "url": "polyfills.900aaf0d520c2ec873a7.bundle.js",
@@ -71,8 +75,8 @@ const fileManifest = [
     "revision": "ccac3dbff61cd19109eecd8d566e595b"
   },
   {
-    "url": "vendor.b4ca5f5cea9fd50e1198.bundle.js",
-    "revision": "cb099268081cb41f464a1b3769bde0e3"
+    "url": "vendor.b8a5744b9dfbf994de9a.bundle.js",
+    "revision": "e6d9b29e8ef3d25c69c06f2ea23206c4"
   }
 ];
 
